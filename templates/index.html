@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" >
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/afcb52252c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+
+
+
+    <title>United States CovidDeaths-Predictor</title>
+  </head>
+  <body>
+    <div class="bg-danger manmeet">
+      
+      
+      <h1 align="left" style="padding-left:20px ;">CovidDeaths-Predictor@UnitedStates</h1>
+
+      <div class="dropdown" id="dropdown">
+        <button class="btn btn-secondary btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Check Encoding For County
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Snohomish	1599 <br>
+            Cook	414  <br>
+            Orange	1285 <br>
+            Maricopa	1074 <br>
+            Los Angeles	1032 <br>
+            Santa Clara	1537 <br>
+            Suffolk	1664 <br>
+            San Francisco	1517 <br>
+            Dane	465 <br>
+            San Diego	1516 <br>
+            Bexar	158 <br>
+            Douglas	526 <br>
+            Humboldt	825 <br>
+            Sacramento	1501 <br>
+            Solano	1602 <br>
+            Spokane	1612 <br>
+            Salt Lake	1510 <br>
+            Marin	1076 <br>
+            Napa	1206 <br>
+            Sonoma	1605 <br>
+            Washington	1828 <br>
+            King	926 <br>
+            Alameda	16
+            Hillsborough	794 <br>
+            Manatee	1067 <br>
+            New York City	1226 <br>
+            Unknown	1769 <br>
+            Placer	1372 <br>
+            San Mateo	1524 <br>
+            Fulton	632 <br>
+            Norfolk	1242 <br>
+            Grafton	687 <br>
+            Walla Walla	1810 <br>
+            Contra Costa	411 <br>
+            Wake	1806 <br>
+            Bergen	150 <br>
+            Westchester	1848 <br>
+            Fort Bend	619 <br>
+            Chelan	329 <br>
+            Jefferson	868 <br>
+            Santa Rosa	1541 <br>
+            Montgomery	 <br>
+            Middlesex	1141 <br>
+            Clark	362 <br>
+            Washoe	1830 <br>
+            Nassau	1209 <br>
+            Williamson	1876 <br>
+            Harris	761 <br>
+            Pinal	1362 <br>
+            Yolo	1920 <br>
+            Denver	497 <br>
+            Eagle	542 <br>
+            El Paso	561 <br>
+            Broward	221 <br>
+            Lee	1000 <br>
+            Polk	1381 <br>
+            Honolulu	805 <br>
+            Marion	1078 <br>
+            Fayette	599 <br>
+            Ramsey	1428 <br>
+            Camden	265 <br>
+            Rockland	1479 <br>
+            Chatham	322 <br>
+            Tulsa	1752 <br>
+            Delaware	492 <br>
+            Wayne	1837 <br>
+            Charleston	316 <br>
+            Kershaw	918 <br>
+            Davis	475 <br>
+            Pierce	1359 <br>
+            Fresno	629 <br>
+            Madera	1057 <br>
+            Riverside	1466 <br>
+            Santa Cruz	1538 <br>
+            District of Columbia	512 <br>
+            Charlotte	318 <br>
+            Okaloosa	1270 <br>
+            Volusia	1799 <br>
+            Cobb	379 <br>
+            Gwinnett	730 <br>
+            Johnson	880 <br>
+            Berkshire	153 <br>
+            St. Louis	 <br>
+            Rockingham	1478 <br>
+            Saratoga	1543 <br>
+            Jackson	862 <br>
+            Klamath	940 <br>
+            Bennington	145 <br>
+            Fairfax	586 <br>
+            Kittitas	 <br>
+            Fairfield	 <br>
+            Cherokee	332 <br>
+            Hendricks	779 <br>
+            Harrison	762 <br>
+            Harford	755 <br>
+            Worcester	1897 <br>
+            Carver	288 <br>
+            Passaic	1323 <br>
+            Ulster	1765 <br>
+            Spartanburg	1609 <br>
+            Davidson	472 <br>
+            Shelby	1579 <br>
+            Kitsap	937 <br>
+            Pima	1361 <br>
+            Shasta	1575 <br>
+            Arapahoe	58 <br>
+            Larimer	981 <br>
+            DeKalb	483 <br>
+            Floyd	611 <br>
+            Noble	1237
+            Pottawattamie	1392 <br>
+            Prince George's	1409 <br>
+            Hudson	820 <br>
+            Monmouth	1165 <br>
+            Union	1768 <br>
+            Cuyahoga	458 <br>
+            Monroe	1169 <br>
+            Collin	395 <br>
+            Virginia Beach city	1798 <br>
+            San Joaquin	1520 <br>
+            Ventura	1788 <br>
+            Gunnison	727 <br>
+            Alachua	14 <br>
+            Collier	394 <br>
+            Pasco	1321
+            Pinellas	1364 <br>
+            Charlton	320
+            Kane	897 <br>
+            McHenry	1108 <br>
+            Adams	5 <br>
+            Boone	183 <br>
+            Orleans	1288 <br>
+            Essex	579 <br>
+            Oakland	1258 <br>
+            Anoka	49 <br>
+            Burlington	240 <br>
+            Multnomah	1194 <br>
+            Philadelphia	1353 <br>
+            Beadle	128 <br>
+            Charles Mix	315 <br>
+            Davison	476 <br>
+            Minnehaha	1154 <br>
+            Sullivan	1666 <br>
+            Dallas	464 <br>
+            Tarrant	1694 <br>
+            Weber	1841 <br>
+            Loudoun	1034 <br>
+            Skagit	1593 <br>
+            Whatcom	1854 <br>
+            Stanislaus	1637 <br>
+            Pitkin	1367 <br>
+            New Castle	1220 <br>
+            Miami-Dade	1140 <br>
+            St. Johns	1624 <br>
+            Bartow	119 <br>
+            Lowndes	1039 <br>
+            Lake	966 <br>
+            Howard	817 <br>
+            St. Joseph	1625 <br>
+            Caddo	251 <br>
+            Baltimore	98 <br>
+            Olmsted	1279 <br>
+            Forrest	617 <br>
+            Bernalillo	154 <br>
+            Santa Fe	1539 <br>
+            Socorro	1601 <br>
+            Ward	1819 <br>
+            Stark	1641 <br>
+            Deschutes	499 <br>
+            Linn	1019 <br>
+            Umatilla	1766 <br>
+            Bucks	228 <br>
+            Lancaster	973 <br>
+            Bon Homme	179 <br>
+            Gregg	713 <br>
+            Chittenden	345 <br>
+            Arlington	64 <br>
+            Island	855 <br>
+            Thurston	1711 <br>
+            Fond du Lac	 <br>
+            Waukesha	1834 <br>
+            Sheridan	1582 <br>
+            Anchorage	42 <br>
+            Pulaski	1415 <br>
+            Tulare	1751 <br>
+            Litchfield	1021 <br>
+            Clay	365 <br>
+            Duval	540 <br>
+            Palm Beach	1312 <br>
+            Sarasota	1542 <br>
+            Seminole	1565 <br>
+            Carroll	283 <br>
+            Wyandotte	1902 <br>
+            Androscoggin	46 <br>
+            Ingham	842 <br>
+            Kent	913 <br>
+            Montcalm	1171 <br>
+            St. Clair	1616 <br>
+            Washtenaw	1831 <br>
+            Dakota	461 <br>
+            Hennepin	781 <br>
+            Stearns	1646 <br>
+            Greene	706 <br>
+            Cass	291 <br>
+            Carson City	285 <br>
+            Morris	1185 <br>
+            Albany	18 <br>
+            Dutchess	539 <br>
+            Herkimer	784 <br>
+            Cabarrus	247 <br>
+            Forsyth	618 <br>
+            Johnston	881 <br>
+            Mecklenburg	1122 <br>
+            Onslow	1282 <br>
+            Trumbull	1749 <br>
+            Clackamas	356 <br>
+            Northampton	1246 <br>
+            Pike	1360 <br>
+            Knox	944 <br>
+            Alexandria city	25 <br>
+            Hanover	746 <br>
+            James City	863 <br>
+            Prince Edward	1407 <br>
+            Prince William	1410 <br>
+            Columbia	400 <br>
+            Grays Harbor	700 <br>
+            Yakima	1907 <br>
+            Elmore	569 <br>
+            Limestone	1017 <br>
+            Tuscaloosa	1756 <br>
+            San Benito	1514 <br>
+            Clear Creek	367 <br>
+            Pueblo	1414 <br>
+            Routt	1490 <br>
+            Summit	1669 <br>
+            Weld	1843 <br>
+            Osceola	1292 <br>
+            Gordon	682 <br>
+            Henry	783 <br>
+            Ada	3 <br>
+            Butler	244 <br>
+            St. Charles	1615 <br>
+            St. Tammany	1634 <br>
+            Terrebonne	1703 <br>
+            Cumberland	453 <br>
+            Anne Arundel	48 <br>
+            Charles	313 <br>
+            Bay	124 <br>
+            Charlevoix	317 <br>
+            Leelanau	1001 <br>
+            Macomb	1054 <br>
+            Wright	1900 <br>
+            Copiah	419 <br>
+            Leflore	1002 <br>
+            Pearl River	1331 <br>
+            Gallatin	638 <br>
+            Lewis and Clark	1012 <br>
+            Silver Bow	1588 <br>
+            Yellowstone	1918 <br>
+            Ocean	1260 <br>
+            Schenectady	1549 <br>
+            Oklahoma	1274 <br>
+            Chester	336 <br>
+            McCook	1098 <br>
+            Hamilton	738 <br>
+            Rutherford	1496 <br>
+            Bell	139 <br>
+            Galveston	640 <br>
+            Smith	1597 <br>
+            Travis	1737 <br>
+            Harrisonburg city	763 <br>
+            Grant	695 <br>
+            Milwaukee	1149 <br>
+            Racine	1423 <br>
+            Sheboygan	1578 <br>
+            Fremont	628 <br>
+            Baldwin	96 <br>
+            Graham	688 <br>
+            San Luis Obispo	1523 <br>
+            Boulder	189 <br>
+            Mesa	1137 <br>
+            Hartford	765 <br>
+            New Haven	1222 <br>
+            Coweta	431 <br>
+            Kauai	901 <br>
+            Blaine	168 <br>
+            Teton	1706 <br>
+            DuPage	529 <br>
+            Sangamon	1533 <br>
+            Woodford	1892 <br>
+            LaPorte	957 <br>
+            Wells	1844 <br>
+            Franklin	622 <br>
+            Bourbon	191 <br>
+            Nelson	1214 <br>
+            Bossier	186 <br>
+            Lafourche	964 <br>
+            St. John the Baptist	1623 <br>
+            Barnstable	110 <br>
+            Bristol	212 <br>
+            Renville	1448 <br>
+            Missoula	1157 <br>
+            Mercer	1133 <br>
+            Sandoval	1531 <br>
+            Broome	219 <br>
+            Tioga	1716 <br>
+            Tompkins	1727 <br>
+            Brunswick	224 <br>
+            Craven	437 <br>
+            Harnett	758 <br>
+            Belmont	140 <br>
+            Lorain	1030 <br>
+            Tuscarawas	1757 <br>
+            Allegheny	32 <br>
+            Beaufort	130 <br>
+            Lexington	1013 <br>
+            Campbell	268 <br>
+            Brazoria	204 <br>
+            Hays	773 <br>
+            Windsor	1880 <br>
+            Chesterfield	337 <br>
+            Spotsylvania	1613 <br>
+            Klickitat	942 <br>
+            Winnebago	1883 <br>
+            Garland	643 <br>
+            Saline	1509 <br>
+            San Bernardino	1515 <br>
+            Santa Barbara	1536 <br>
+            Garfield	642 <br>
+            Baker	95 <br>
+            Citrus	355 <br>
+            Clarke	363 <br>
+            Clayton	366 <br>
+            Dougherty	525 <br>
+            Newton	1231 <br>
+            Maui	1090 <br>
+            Clinton	374 <br>
+            Whiteside	1859 <br>
+            Allamakee	28 <br>
+            St. Bernard	1614 <br>
+            Lincoln	1018 <br>
+            Baltimore city	99 <br>
+            Hampden	740 <br>
+            Plymouth	1377 <br>
+            Ottawa	1298 <br>
+            Waseca	 <br>
+            Hinds	796 <br>
+            Erie	576 <br>
+            Putnam	 <br>
+            Watauga	1832 <br>
+            Wilson	1877 <br>
+            Lucas	1041 <br>
+            Medina	1124 <br>
+            Cleveland	372 <br>
+            Kay	903 <br>
+            Payne	1329 <br>
+            Yamhill	1909 <br>
+            Lehigh	1003 <br>
+            Luzerne	1047 <br>
+            Anderson	 <br>
+            Greenville	710 <br>
+            Horry	812 <br>
+            Denton	496 <br>
+            Utah	1773 <br>
+            Lewis	1011 <br>
+            Fairbanks North Star Borough	585 <br>
+            Cleburne	370 <br>
+            Desha	500 <br>
+            Nevada	1219 <br>
+            Escambia	577 <br>
+            Hall	736 <br>
+            Paulding	1326 <br>
+            Troup	1746 <br>
+            Peoria	1341 <br>
+            Will	 <br>
+            Bartholomew	117 <br>
+            Ascension	69 <br>
+            Frederick	624 <br>
+            Talbot	1685 <br>
+            Benton	148 <br>
+            Blue Earth	175 <br>
+            Hancock	744 <br>
+            Hunterdon	828 <br>
+            Somerset	1603 <br>
+            Allegany	30 <br>
+            Onondaga	1281 <br>
+            Ontario	1283 <br>
+            Durham	538 <br>
+            Geauga	 <br>
+            Canadian	270 <br>
+            Sevier	1569 <br>
+            Bowie	192 <br>
+            Matagorda	1087 <br>
+            Tooele	1728 <br>
+            Wasatch	1823 <br>
+            Stafford	1636 <br>
+            York	1921 <br>
+            Outagamie	1302 <br>
+            Wood	1890<br> 
+            Madison	1058 <br>
+            Ketchikan Gateway Borough	919<br>
+            Navajo	1212<br>
+            Kern	916<br>
+            Monterey	1172<br>
+            Sussex	1675<br>
+            Brevard	209<br>
+            Richmond	1456<br>
+            Whitfield	1860<br>
+            Hawaii	770<br>
+            Adair	4<br>
+            Black Hawk	165<br>
+            Ford	615<br>
+            Lyon	1052<br>
+            East Baton Rouge	544<br>
+            Kennebec	911<br>
+            Oxford	1307<br>
+            Otsego	1297<br>
+            Martin	1083<br>
+            Nicollet	1235<br>
+            Cole	389<br>
+            Sarpy	1545<br>
+            Gloucester	673<br>
+            Warren	1821<br>
+            Taos	1693<br>
+            Rensselaer	1447            <br>
+            Wyoming	1903<br>
+            Iredell	847<br>
+            Sampson	1512<br>
+            Burleigh	238<br>
+            Coshocton	424<br>
+            Darke	469<br>
+            Mahoning	1062<br>
+            Pawnee	1327<br>
+            Lane	975<br>
+            Beaver	132<br>
+            Calhoun	257<br>
+            Richland	1455<br>
+            Brazos	205<br>
+            Ellis	567<br>
+            Lubbock	1040<br>
+            Charlottesville city	319<br>
+            Goochland	679<br>
+            Henrico	782<br>
+            Williamsburg city	1875<br>
+            Mason	1085<br>
+            Kenosha	912<br>
+            Laramie	979<br>
+            Park	1317<br>
+            Talladega	1687<br>
+            Kenai Peninsula Borough	908<br>
+            Coconino	383<br>
+            Bradley	200<br>
+            Faulkner	597<br>
+            Mendocino	1129<br>
+            Yuma	1925<br>
+            Leon	1007<br>
+            Sumter	1671<br>
+            Walton	1816<br>
+            Houston	816<br>
+            Twin Falls	1760<br>
+            Kankakee	898<br>
+            Kendall	909<br>
+            LaSalle	958<br>
+            Jennings	871<br>
+            Winneshiek	1884<br>
+            Leavenworth	998<br>
+            Kenton	914<br>
+            Penobscot	1339<br>
+            Rice	1452<br>
+            Bolivar	177<br>
+            Coahoma	376<br>
+            DeSoto	484<br>
+            Perry	1345<br>
+            St. Louis city	1629<br>
+            Belknap	138<br>
+            Merrimack	1136<br>
+            Atlantic	80<br>
+            Chenango	331<br>
+            Livingston	1024<br>
+            Gaston	649<br>
+            Guilford	725<br>
+            Hoke	802<br>
+            Moore	1179<br>
+            New Hanover	1221<br>
+            Morton	1188<br>
+            Ashland	71<br>
+            Huron	831<br>
+            Miami	1139<br>
+            Berks	152<br>
+            Lackawanna	961<br>
+            Cheatham	327<br>
+            Robertson	1471<br>
+            Sumner	1670<br>
+            Lavaca	992<br>
+            McLennan	1114<br>
+            Rusk	1494<br>
+            Webb	1840<br>
+            Wichita	1864<br>
+            Box Elder	195<br>
+            Cache	250<br>
+            Charles City	314<br>
+            Richmond city	1457 <br>
+            Brown	222 <br>
+            La Crosse	951 <br>
+            Chambers	310 <br>
+            Mobile	1159 <br>
+            Walker	1809 <br>
+            Yavapai	1914 <br>
+            Craighead	435 <br>
+            Crittenden	442 <br>
+            Independence	839 <br>
+            Poinsett	1379 <br>
+            Pope	1385 <br>
+            Searcy	1562 <br>
+            Sebastian	1563 <br>
+            Van Buren	1780 <br>
+            Crowley	448 <br>
+            Grand	690 <br>
+            Morgan	1182 <br>
+            Tolland	1725 <br>
+            Windham	1879 <br>
+            Hernando	785 <br>
+            Indian River	840 <br>
+            Bibb	159 <br>
+            Early	543 <br>
+            Effingham	559 <br>
+            Glynn	674 <br>
+            Laurens	991 <br>
+            Peach	1330 <br>
+            Rockdale	1477 <br>
+            Owen	1304 <br>
+            Tippecanoe	1718 <br>
+            Dubuque	531 <br>
+            Muscatine	1196 <br>
+            Sedgwick	1564 <br>
+            Christian	349 <br>
+            Daviess	474 <br>
+            Henderson	778 <br>
+            Scott	1558 <br>
+            Assumption	75 <br>
+            Calcasieu	254 <br>
+            Iberia	834 <br>
+            Iberville	835 <br>
+            Lafayette	963 <br>
+            Plaquemines	1373 <br>
+            St. James	1621 <br>
+            St. Landry	1626 <br>
+            Webster	1842 <br>
+            West Baton Rouge	1845 <br>
+            Calvert	262 <br>
+            Wicomico	1865 <br>
+            Hampshire	741 <br>
+            Eaton	548 <br>
+            Genesee	654 <br>
+            Midland	1142 <br>
+            Mower	1192 <br>
+            Holmes	803 <br>
+            Jones	882 <br>
+            Walthall	1815 <br>
+            Wilkinson	1870 <br>
+            Winston	1886 <br>
+            Yazoo	1915 <br>
+            Broadwater	215 <br>
+            Flathead	607 <br>
+            Roosevelt	1485 <br>
+            Nemaha	1215 <br>
+            Elko	565 <br>
+            Cape May	276 <br>
+            San Miguel	1525 <br>
+            Schoharie	1552 <br>
+            Custer	457 <br>
+            Grady	686 <br>
+            Logan	1026 <br>
+            McClain	1096 <br>
+            Lebanon	999 <br>
+            Westmoreland	1849 <br>
+            Abbeville	0 <br>
+            Dorchester	524 <br>
+            Saluda	1511 <br>
+            Dyer	541 <br>
+            Cameron	266 <br>
+            Crane	436 <br>
+            DeWitt	485 <br>
+            Van Zandt	1782 <br>
+            Clallam	358 <br>
+            Monongalia	1168 <br>
+            Tucker	1750 <br>
+            Bayfield	126 <br>
+            Calumet	261 <br>
+            Eau Claire	549 <br>
+            Ozaukee	1309 <br>
+            Sauk	1546 <br>
+            Walworth	1817 <br>
+            Cullman	451 <br>
+            Lamar	969 <br>
+            Lauderdale	989 <br>
+            Amador	37 <br>
+            Imperial	838 <br>
+            Broomfield	220 <br>
+            New London	1224 <br>
+            Dawson	478 <br>
+            Heard	775 <br>
+            Miller	1147 <br>
+            Muscogee	1197 <br>
+            Oconee	1263 <br>
+            Pickens	1357 <br>
+            Randolph	1430 <br>
+            Spalding	1608 <br>
+            Terrell	1704 <br>
+            Tift	1712 <br>
+            Turner	1755 <br>
+            Worth	1898 <br>
+            Bingham	164 <br>
+            Canyon	274 <br>
+            Kootenai	947 <br>
+            McLean	1113 <br>
+            Allen	33 <br>
+            Vanderburgh	1784 <br>
+            Vigo	1794 <br>
+            Reno	1446 <br>
+            Riley	1458 <br>
+            Calloway	260 <br>
+            Catahoula	295 <br>
+            De Soto	481 <br>
+            Rapides	1433 <br>
+            Tangipahoa	1692 <br>
+            Chisago	344 <br>
+            Fillmore	603 <br>
+            Humphreys	826 <br>
+            Lawrence	993 <br>
+            Marshall	1082 <br>
+            Rankin	1431 <br>
+            Tippah	1717 <br>
+            Dunklin	535 <br>
+            Kansas City	899 <br>
+            Buffalo	231 <br>
+            Nye	1256 <br>
+            Cheshire	335 <br>
+            DoÃ±a Ana	527 <br>
+            McKinley	1112 <br>
+            Niagara	1233 <br>
+            Oneida	1280 <br>
+            Carteret	287 <br>
+            Pasquotank	1322 <br>
+            Pitt	1368 <br>
+            Rowan	1491 <br>
+            Stanly	1639 <br>
+            Ashtabula	73 <br>
+            Columbiana	401 <br>
+            Garvin	646 <br>
+            Centre	307 <br>
+            Potter	1393 <br>
+            Aiken	12 <br>
+            Berkeley	151 <br>
+            Clarendon	360 <br>
+            Darlington	470 <br>
+            Florence	609 <br>
+            Orangeburg	1286 <br>
+            Blount	174 <br>
+            Dickson	507 <br>
+            Hamblen	737 <br>
+            Maury	1092 <br>
+            Tipton	1719 <br>
+            Fannin	594 <br>
+            Hockley	800 <br>
+            Upshur	1770 <br>
+            Addison	6 <br>
+            Rutland	1497 <br>
+            Accomack	2 <br>
+            Newport News city	1230 <br>
+            Norfolk city	1243 <br>
+            Portsmouth city	1389 <br>
+            Cowlitz	433 <br>
+            San Juan	1521 <br>
+            Stevens	1652 <br>
+            Kanawha	895 <br>
+            Chippewa	343 <br>
+            Dunn	536 <br>
+            Green	703 <br>
+            Marathon	1071 <br>
+            Rock	1473 <br>
+            St. Croix	1617 <br>
+            Natrona	1211 <br>
+            Apache	53 <br>
+            Cochise	380 <br>
+            Butte	245 <br>
+            El Dorado	560 <br>
+            Siskiyou	1591 <br>
+            Yuba	1923 <br>
+            Chaffee	309 <br>
+            Elbert	562 <br>
+            Hinsdale	797 <br>
+            Montrose	1177 <br>
+            Highlands	792 <br>
+            St. Lucie	1630 <br>
+            Lumpkin	1043 <br>
+            Elkhart	564 <br>
+            Story	1660 <br>
+            Spencer	1610 <br>
+            Avoyelles	91 <br>
+            Beauregard	131 <br>
+            Bienville	160 <br>
+            Claiborne	357
+            Evangeline	583 <br>
+            Ouachita	1300 <br>
+            St. Mary	1632 <br>
+            Sagadahoc	1502 <br>
+            Caroline	282 <br>
+            Nantucket	1205 <br>
+            Allegan	29 <br>
+            Barry	116 <br>
+            Berrien	155 <br>
+            Clare	359 <br>
+            Saginaw	1503 <br>
+            Tuscola	1758 <br>
+            Wexford	1852 <br>
+            Dodge	517 <br>
+            Steele	1647 <br>
+            Wabasha	1801 <br>
+            Attala	82 <br>
+            George	657 <br>
+            Grenada	715 <br>
+            Itawamba	859 <br>
+            Leake	997 <br>
+            Panola	1316 <br>
+            Simpson	1589 <br>
+            Tunica	1753 <br>
+            Bates	121 <br>
+            Jasper	864 <br>
+            Cascade	289 <br>
+            Ravalli	1435 <br>
+            Strafford	1661 <br>
+            Lea	996 <br>
+            Steuben	1651 <br>
+            Buncombe	235 <br>
+            Catawba	297 <br>
+            Clermont	371 <br>
+            Defiance	490 <br>
+            Licking	1016 <br>
+            Josephine	884 <br>
+            Montour	1176 <br>
+            Dillon	509 <br>
+            Edgefield	555 <br>
+            Greenwood	711 <br>
+            Marlboro	1080 <br>
+            Newberry	1228 <br>
+            Cocke	382 <br>
+            Roane	1467 <br>
+            Bastrop	120 <br>
+            Castro	293 <br>
+            Deaf Smith	486 <br>
+            Oldham	1277 <br>
+            Albemarle	19 <br>
+            Botetourt	187 <br>
+            Isle of Wight	856 <br>
+            Suffolk city	1665 <br>
+            Carbon	277 <br>
+            Bradford	199 <br>
+            Flagler	606 <br>
+            Barrow	115 <br>
+            Butts	246 <br>
+            Chattooga	324 <br>
+            Clinch	373 <br>
+            Coffee	385 <br>
+            Tattnall	1696 <br>
+            Twiggs	1759 <br>
+            Valley	1779 <br>
+            Champaign	311 <br>
+            Jo Daviess	879 <br>
+            Rock Island	1474<br>
+            Stephenson	1649<br>
+            Ripley	1464<br>
+            Cerro Gordo	308<br>
+            Kossuth	949<br>
+            Poweshiek	1397<br>
+            Sioux	1590<br>
+            Tama	1690<br>
+            Woodbury	1891<br>
+            Mitchell	1158<br>
+            Breathitt	206<br>
+            Hardin	752<br>
+            Jessamine	875<br>
+            Acadia	1<br>
+            Cecil	304<br>
+            St. Mary's	1633<br>
+            Emmet	572<br>
+            Gladwin	669<br>
+            Grand Traverse	693<br>
+            Roscommon	1486<br>
+            Le Sueur	995<br>
+            Chickasaw	339<br>
+            Oktibbeha	1276<br>
+            Pontotoc	1384<br>
+            Sunflower	1672<br>
+            Tate	1695<br>
+            Salem	1506<br>
+            Cortland	422<br>
+            St. Lawrence	1627<br>
+            Davie	473<br>
+            Granville	696<br>
+            Nash	1208<br>
+            Robeson	1472<br>
+            Scotland	1557<br>
+            Gallia	639<br>
+            Portage	1387<br>
+            Muskogee	1200<br>
+            Dauphin	471<br>
+            Schuylkill	1555<br>
+            Colleton	393<br>
+            Gibson	659<br>
+            Loudon	1033<br>
+            McMinn	1116<br>
+            Amherst	39<br>
+            Bedford	136<br>
+            Culpeper	452<br>
+            Fluvanna	612<br>
+            Louisa	1035<br>
+            Whitman	1862<br>
+            Tallapoosa	1689<br>
+            Juneau City and Borough	890<br>
+            Matanuska-Susitna Borough	1088<br>
+            La Plata	953<br>
+            Teller	1701<br>
+            Burke	237<br>
+            Catoosa	298<br>
+            Liberty	1015<br>
+            Dubois	530<br>
+            Wapello	1818<br>
+            Natchitoches	1210<br>
+            St. Martin	1631<br>
+            Garrett	645<br>
+            Queen Anne's	1420<br>
+            Kalamazoo	892<br>
+            Muskegon	1198<br>
+            Newaygo	1227<br>
+            Big Stone	162<br>
+            Lac qui Parle	960<br>
+            Sherburne	1581<br>
+            Tallahatchie	1688<br>
+            Callaway	259<br>
+            Moniteau	1164<br>
+            St. Francois	1619<br>
+            Taney	1691<br>
+            Chaves	326<br>
+            Cayuga	303<br>
+            Oswego	1294<br>
+            Alamance	15<br>
+            Vance	1783<br>
+            Walsh	1814<br>
+            Sandusky	1532<br>
+            Hood River	807<br>
+            Cambria	264<br>
+            Georgetown	658<br>
+            Codington	384<br>
+            Hughes	823<br>
+            Lyman	1049<br>
+            Pennington	1338<br>
+            Iron	849<br>
+            Danville city	467<br>
+            Rockbridge	1475<br>
+            Autauga	89<br>
+            Conway	413<br>
+            Crawford	438<br>
+            Cross	446<br>
+            Hot Spring	813<br>
+            Stone	1657<br>
+            White	1857<br>
+            Woodruff	1893<br>
+            Calaveras	253<br>
+            Merced	1132<br>
+            Mono	1166<br>
+            Delta	493<br>
+            Huerfano	822<br>
+            Ben Hill	142<br>
+            Bryan	225<br>
+            Colquitt	399<br>
+            Crisp	441<br>
+            Irwin	851<br>
+            Macon	1055<br>
+            Meriwether	1134<br>
+            Stephens	1648<br>
+            Bannock	104<br>
+            Cassia	292<br>
+            Grundy	718<br>
+            Dearborn	487<br>
+            Decatur	488<br>
+            Ohio	1269<br>
+            Porter	1388<br>
+            Starke	1642<br>
+            Warrick	1822<br>
+            Buchanan	226<br>
+            Cedar	305<br>
+            Doniphan	519<br>
+            Pottawatomie	1391<br>
+            Woodson	1895<br>
+            McCracken	1100<br>
+            Menifee	1130<br>
+            Muhlenberg	1193<br>
+            Vernon	1791<br>
+            Waldo	1808<br>
+            Hillsdale	795<br>
+            Isabella	853<br>
+            Kalkaska	893<br>
+            Lapeer	978<br>
+            Manistee	1069<br>
+            Choctaw	346<br>
+            Noxubee	1253<br>
+            Cape Girardeau	275<br>
+            Pemiscot	1334<br>
+            Saunders	1547<br>
+            Cibola	352<br>
+            Curry	456<br>
+            Chemung	330<br>
+            Transylvania	1735<br>
+            Highland	791<br>
+            Mayes	1095<br>
+            Wagoner	1804<br>
+            Clatsop	364<br>
+            Armstrong	65<br>
+            Clearfield	368<br>
+            Juniata	891<br>
+            Brookings	217<br>
+            Overton	1303<br>
+            Comal	404<br>
+            Falls	592<br>
+            Grayson	701<br>
+            Hidalgo	790<br>
+            Nueces	1255<br>
+            Parker	1319<br>
+            Victoria	1792<br>
+            Caledonia	256<br>
+            Chesapeake city	334<br>
+            Halifax	735<br>
+            Preston	1405<br>
+            Sweetwater	1681<br>
+            Chilton	342<br>
+            Colbert	388<br>
+            Etowah	581<br>
+            Russell	1495<br>
+            Wilcox	1867<br>
+            Drew	528<br>
+            Inyo	843<br>
+            Sutter	1676<br>
+            Otero	1295<br>
+            Gadsden	634<br>
+            Long	1028 <br>
+            Taylor	1697<br>
+            Thomas	1709<br>
+            Ware	1820<br>
+            Wilkes	1868<br>
+            Idaho	837<br>
+            Nez Perce	1232<br>
+            Payette	1328<br>
+            Rush	1493<br>
+            Neosho	1216<br>
+            Shawnee	1577<br>
+            Laurel	990<br>
+            McCreary	1101<br>
+            Jefferson Davis	869<br>
+            Morehouse	1181<br>
+            Winn	1882<br>
+            Dukes	533<br>
+            Iosco	845<br>
+            Lenawee	1005<br>
+            Marquette	1081<br>
+            Sanilac	1534<br>
+            Goodhue	680<br>
+            Winona	1885<br>
+            Prentiss	1402<br>
+            Cooper	416<br>
+            McDonald	1104<br>
+            Platte	1374<br>
+            Ralls	1427<br>
+            Hill	793<br>
+            Eddy	552<br>
+            Rio Arriba	1461<br>
+            Chautauqua	325<br>
+            Bertie	156<br>
+            Caldwell	255<br>
+            Duplin	537<br>
+            Hertford	786<br>
+            Lenoir	1006<br>
+            McDowell	1106<br>
+            Foster	620<br>
+            Pickaway	1356<br>
+            Seneca	1566<br>
+            Carter	286<br>
+            Creek	439<br>
+            Osage	1290<br>
+            Lycoming	1048<br>
+            Newport	1229<br>
+            Providence	1412<br>
+            Williamsburg	1874<br>
+            Meade	1120<br>
+            Hawkins	771<br>
+            Atascosa	76<br>
+            Austin	88<br>
+            Blanco	170<br>
+            Burnet	241<br>
+            Coryell	423<br>
+            Eastland	547<br>
+            Erath	575<br>
+            Gaines	636<br>
+            Grimes	717<br>
+            Guadalupe	719<br>
+            Hale	734<br>
+            Hopkins	810<br>
+            Hunt	827<br>
+            Kaufman	902<br>
+            Llano	1025<br>
+            Maverick	1093<br>
+            Milam	1144<br>
+            San Patricio	1526<br>
+            Terry	1705<br>
+            Tom Green	1726<br>
+            Wharton	1853<br>
+            Lamoille	971<br>
+            Fredericksburg city	625<br>
+            Manassas city	1066<br>
+            Mathews	1089<br>
+            Nottoway	1251<br>
+            Roanoke	1468<br>
+            Shenandoah	1580<br>
+            Ferry	602<br>
+            Okanogan	1271<br>
+            Raleigh	1426<br>
+            Iowa	846<br>
+            Juneau	889<br>
+            Bullock	234<br>
+            Coosa	418<br>
+            Crenshaw	440<br>
+            Marengo	1072<br>
+            La Paz	952<br>
+            Mohave	1163<br>
+            Chicot	340<br>
+            Lonoke	1029<br>
+            Kit Carson	936<br>
+            Rio Grande	1463<br>
+            Haralson	749<br>
+            McDuffie	1107<br>
+            Toombs	1730<br>
+            Tazewell	1698<br>
+            Fountain	621<br>
+            Posey	1390<br>
+            Appanoose	54<br>
+            Des Moines	498<br>
+            Mahaska	1060<br>
+            Monona	1167<br>
+            Page	1311<br>
+            East Feliciana	546<br>
+            Pointe Coupee	1380<br>
+            Vermilion	1789<br>
+            Gogebic	675<br>
+            Ionia	844<br>
+            Mecosta	1123<br>
+            Missaukee	1155<br>
+            Oceana	1261<br>
+            Ogemaw	1265<br>
+            Shiawassee	1584<br>
+            Kandiyohi	896<br>
+            Sibley	1586<br>
+            Wilkin	1869<br>
+            Quitman	1421<br>
+            Yalobusha	1908<br>
+            Bollinger	178<br>
+            Stoddard	1655<br>
+            Meagher	1121<br>
+            Toole	1729<br>
+            Kearney	904<br>
+            McIntosh	1109<br>
+            Athens	78<br>
+            Muskingum	1199<br>
+            Wyandot	1901<br>
+            Comanche	405<br>
+            Craig	434<br>
+            Okmulgee	1275<br>
+            Sequoyah	1568
+            Tillamook	1713<br>
+            Wasco	1824<br>
+            Blair	<br>
+            Indiana	841<br>
+            Susquehanna	1674<br>
+            Cannon	272<br>
+            Meigs	1126<br>
+            Unicoi	1767<br>
+            Angelina	47<br>
+            Karnes	900<br>
+            Nacogdoches	1202<br>
+            Rockwall	1480<br>
+            Val Verde	1776<br>
+            Amelia	38<br>
+            Fauquier	598<br>
+            Hampton city	743<br>
+            King George	927<br>
+            Lynchburg city	1050<br>
+            Pittsylvania	1370<br>
+            Poquoson city	1386<br>
+            Prince George	1408<br>
+            Radford city	1424<br>
+            Southampton	1606<br>
+            Vilas	1795<br>
+            Hot Springs	814<br>
+            Covington	429<br>
+            Baxter	123<br>
+            Colusa	403<br>
+            Kings	932<br>
+            Alamosa	17<br>
+            Costilla	425<br>
+            Levy	1010<br>
+            Suwannee	1678<br>
+            Chattahoochee	323<br>
+            Habersham	732<br>
+            Hart	764<br>
+            Upson	1771<br>
+            Gem	653<br>
+            Bureau	236<br>
+            Iroquois	<br>
+            Huntington	830<br>
+            Kosciusko	948<br>
+            LaGrange	955<br>
+            Whitley	1861<br>
+            Dickinson	506<br>
+            Coffey	386<br>
+            Gove	685<br>
+            Harvey	767<br>
+            McPherson	1119<br>
+            Bullitt	232<br>
+            Larue	982<br>
+            West Feliciana	1847<br>
+            Gratiot	697<br>
+            Beltrami	141<br>
+            Faribault	595<br>
+            Mahnomen	1061<br>
+            Kemper	907<br>
+            Neshoba	1217<br>
+            Sharkey	1573<br>
+            Atchison	77<br>
+            Chariton	312<br>
+            Pettis	1351<br>
+            Ray	1437<br>
+            Valencia	1778<br>
+            Person	1347<br>
+            Surry	1673<br>
+            Latimer	988<br>
+            Pittsburg	1369<br>
+            Morrow	1187<br>
+            Northumberland	1247<br>
+            Aurora	87<br>
+            Faulk	596<br>
+            Todd	1724<br>
+            Hood	806<br>
+            Montague	1170<br>
+            Navarro	1213<br>
+            Randall	1429<br>
+            Starr	1643<br>
+            Uvalde	1775<br>
+            Willacy	1872
+            Young	1922<br>
+            Uintah	1764<br>
+            Bristol city	214<br>
+            Galax city	637<br>
+            Roanoke city	1469<br>
+            Skamania	1595<br>
+            Greenbrier	705<br>
+            Pleasants	1375<br>
+            Marinette	1077<br>
+            Waupaca	1835<br>
+            Goshen	683<br>
+            Washakie	1826<br>
+            Gila	660<br>
+            Glenn	672<br>
+            Baca	92<br>
+            Moffat	1162<br>
+            Hendry	780<br>
+            Bulloch	233<br>
+            Jenkins	870<br>
+            Murray	1195<br>
+            Wheeler	1856<br>
+            Bonneville	182<br>
+            Switzerland	1684<br>
+            Vermillion	1790<br>
+            Wabash	1800<br>
+            Keokuk	915<br>
+            Boyle	197<br>
+            Bracken	198<br>
+            Breckinridge	207<br>
+            Nicholas	1234<br>
+            East Carroll	545<br>
+            Clearwater	369<br>
+            Amite	40<br>
+            Gosper	684<br>
+            Cattaraugus	300<br>
+            Schuyler	1554<br>
+            Edgecombe	554<br>
+            Perquimans	1344<br>
+            Barnes	109<br>
+            Divide	513<br>
+            Mountrail	1191<br>
+            Auglaize	85<br>
+            Van Wert	1781<br>
+            Le Flore	994<br>
+            Nowata	1252<br>
+            Clarion	361<br>
+            Huntingdon	829<br>
+            McKean	1110<br>
+            Snyder	1600<br>
+            Deuel	501<br>
+            Hamlin	739<br>
+            Hutchinson	832<br>
+            Yankton	1911<br>
+            Bledsoe	173<br>
+            Hardeman	751<br>
+            Trousdale	1747<br>
+            Weakley	1839<br>
+            Burleson	239<br>
+            Lamb	970<br>
+            Lynn	1051<br>
+            Hopewell city	809<br>
+            New Kent	1223<br>
+            Powhatan	1398<br>
+            Converse	412<br>
+            Sublette	1663<br>
+            Arkansas	63<br>
+            Ashley	72<br>
+            Hempstead	777<br>
+            Tuolumne	1754<br>
+            Mineral	1151<br>
+            Montezuma	1173<br>
+            Glades	668<br>
+            Wakulla	1807<br>
+            Bacon	93<br>
+            Brooks	218<br>
+            Candler	271<br>
+            Owyhee	1306<br>
+            Bond	180<br>
+            Menard	1128<br>
+            Finney	604<br>
+            Boyd	196<br>
+            Red River	1441<br>
+            Sabine	1499<br>
+            Cheboygan	328<br>
+            Cottonwood	428<br>
+            Isanti	854<br>
+            Otter Tail	1299<br>
+            Deer Lodge	489<br>
+            Scotts Bluff	1559<br>
+            Alleghany	31<br>
+            Caswell	294<br>
+            Columbus	402<br>
+            Currituck	455<br>
+            Pamlico	1315<br>
+            Yadkin	1906<br>
+            Rogers	1482<br>
+            Texas	1707<br>
+            Mifflin	1143<br>
+            Venango	1787<br>
+            Fall River	590<br>
+            Roberts	1470<br>
+            Haywood	774<br>
+            McNairy	1118<br>
+            Obion	1259<br>
+            Ector	551<br>
+            Kleberg	941<br>
+            San Jacinto	1519<br>
+            Swisher	1683<br>
+            Waller	1812<br>
+            Greensville	708<br>
+            Manassas Park city	1065<br>
+            Winchester city	1878<br>
+            Wythe	1904<br>
+            Cabell	248<br>
+            Wetzel	1851<br>
+            Wirt	1887<br>
+            Greenlee	707<br>
+            St. Francis	1618<br>
+            Alpine	36<br>
+            Archuleta	60<br>
+            Phillips	1354<br>
+            Appling	55<br>
+            Banks	102<br>
+            Bleckley	172<br>
+            Dade	459<br>
+            Dooly	521<br>
+            Gilmer	665<br>
+            Schley	1551<br>
+            Bonner	181<br>
+            Jerome	873<br>
+            Minidoka	1153<br>
+            Audubon	84<br>
+            Guthrie	729<br>
+            Antrim	52<br>
+            Houghton	815<br>
+            Itasca	858<br>
+            Meeker	1125<br>
+            Watonwan	1833<br>
+            Alcorn	21<br>
+            Maries	1075<br>
+            Reynolds	1450<br>
+            Antelope	51<br>
+            Torrance	1731<br>
+            Alexander	24<br>
+            Grand Forks	691<br>
+            Oliver	1278<br>
+            Preble	1401<br>
+            Ross	1489<br>
+            Beckham	135<br>
+            Cotton	427<br>
+            Love	1037<br>
+            Barnwell	111<br>
+            Fentress	600<br>
+            Giles	662<br>
+            Wise	1888<br>
+            King William	928<br>
+            Petersburg city	1349<br>
+            Smyth	1598<br>
+            Door	522<br>
+            Plumas	1376<br>
+            Saguache	1504<br>
+            Emanuel	570<br>
+            Oglethorpe	1268<br>
+            Rabun	1422<br>
+            Screven	1560<br>
+            Stewart	1653<br>
+            Camas	263<br>
+            Ogle	1267<br>
+            Barton	118<br>
+            Labette	959<br>
+            Barren	113<br>
+            Edmonson	556<br>
+            Graves	698<br>
+            Powell	1395<br>
+            Rockcastle	1476<br>
+            Concordia	408<br>
+            St. Helena	1620<br>
+            Arenac	62<br>
+            Branch	201<br>
+            Oscoda	1293<br>
+            Carlton	280<br>
+            Traverse	1736<br>
+            Tishomingo	1720<br>
+            Ste. Genevieve	1645<br>
+            Musselshell	1201<br>
+            Kimball	924<br>
+            Anson	50<br>
+            McKenzie	1111<br>
+            Williams	1873<br>
+            Malheur	1064<br>
+            Wallowa	1813<br>
+            Bamberg	100<br>
+            Buckingham	227<br>
+            Franklin city	623<br>
+            King and Queen	929<br>
+            Waynesboro city	1838<br>
+            Hardy	754<br>
+            Oconto	1264<br>
+            Conecuh	409<br>
+            Dale	462<br>
+            Gulf	726<br>
+            Hardee	750<br>
+            Okeechobee	1272<br>
+            Lanier	977<br>
+            Gooding	681<br>
+            Latah	987<br>
+            Massac	1086<br>
+            Jay	865<br>
+            Pratt	1400<br>
+            Mackinac	1053<br>
+            Crow Wing	447<br>
+            Freeborn	626<br>
+            Yellow Medicine	1917<br>
+            Gasconade	648<br>
+            Cuming	454<br>
+            Catron	299<br>
+            Greer	712<br>
+            Allendale	34<br>
+            Grainger	689<br>
+            Hickman	788<br>
+            Sequatchie	1567<br>
+            Camp	267<br>
+            Colorado	398<br>
+            Gonzales	678<br>
+            Gray	699<br>
+            Kerr	917<br>
+            Live Oak	1023<br>
+            San Augustine	1513<br>
+            Augusta	86<br>
+            Barbour	107<br>
+            Menominee	1131<br>
+            Yukon-Koyukuk Census Area	1924<br>
+            Mississippi	1156<br>
+            Sharp	1574<br>
+            Del Norte	491<br>
+            Telfair	1700<br>
+            Macoupin	1056<br>
+            Moultrie	1190<br>
+            Piatt	1355<br>
+            Blackford	166<br>
+            Bremer	208<br>
+            O'Brien	1257<br>
+            Cloud	375<br>
+            Cowley	432<br>
+            Bath	122<br>
+            Pendleton	1337<br>
+            Koochiching	946<br>
+            Howell	818<br>
+            New Madrid	1225<br>
+            Colfax	392<br>
+            Gage	635<br>
+            Otoe	1296<br>
+            Yates	1912<br>
+            Dare	468<br>
+            Gates	650<br>
+            Stokes	1656<br>
+            Guernsey	724<br>
+            Atoka	81<br>
+            Kingfisher	930<br>
+            Kiowa	935<br>
+            Woodward	1896<br>
+            Forest	616<br>
+            Hampton	742<br>
+            McCormick	1099<br>
+            Spink	1611<br>
+            Donley	520<br>
+            Gillespie	663<br>
+            Goliad	677<br>
+            Jim Wells	878<br>
+            Palo Pinto	1314<br>
+            Salem city	1507<br>
+            Pend Oreille	1335<br>
+            Trempealeau	1740<br>
+            Uinta	1763<br>
+            Southeast Fairbanks Census Area	1607<br>
+            Prairie	1399<br>
+            Tehama	1699<br>
+            Las Animas	983<br>
+            Rio Blanco	1462<br>
+            Towns	1733<br>
+            De Witt	482<br>
+            Jersey	874<br>
+            Parke	1318<br>
+            Osborne	1291<br>
+            Aroostook	66<br>
+            Luce	1042<br>
+            Glacier	667<br>
+            Merrick	1135<br>
+            Coos	417<br>
+            Bladen	167<br>
+            Chowan	348<br>
+            Slope	1596<br>
+            Major	1063<br>
+            McCurtain	1103<br>
+            Crook	444<br>
+            Lampasas	972<br>
+            Titus	1721<br>
+            Duchesne	532<br>
+            Emery	571<br>
+            Juab	885<br>
+            Millard	1145<br>
+            Buena Vista city	230<br>
+            Emporia city	574<br>
+            Lexington city	1014<br>
+            Asotin	74<br>
+            Barron	114<br>
+            Ouray	1301<br>
+            Dixie	514<br>
+            Caribou	278<br>
+            Mills	1148<br>
+            Jewell	876<br>
+            McLeod	1115<br>
+            Nodaway	1239<br>
+            Beaverhead	133<br>
+            Cherry	333<br>
+            Los Alamos	1031<br>
+            Ashe	70<br>
+            Tillman	1714<br>
+            Andrews	45<br>
+            Hemphill	776<br>
+            Trinity	1744<br>
+            Tyler	1761<br>
+            Staunton city	1644<br>
+            Wahkiakum	1805<br>
+            Manitowoc	1070<br>
+            Shawano	1576<br>
+            Yell	1916<br>
+            Geary	651<br>
+            Republic	1449<br>
+            Wabaunsee	1802<br>
+            Greenup	709<br>
+            Leslie	1008<br>
+            Letcher	1009<br>
+            Pipestone	1365<br>
+            Phelps	1352<br>
+            Seward	<br>
+            Pender	1336<br>
+            Emmons	573<br>
+            Sherman	1583<br>
+            Aransas	57<br>
+            Petersburg Borough	1348<br>
+            Izard	860<br>
+            Atkinson	79<br>
+            Brantley	202<br>
+            Echols	550<br>
+            Jeff Davis	867<br>
+            Treutlen	1741<br>
+            West Carroll	1846<br>
+            Presque Isle	1404<br>
+            Redwood	1443<br>
+            Gentry	656<br>
+            Cheyenne	338<br>
+            Stanton	1640<br>
+            Scioto	1556<br>
+            Pecos	1332<br>
+            Zapata	1926<br>
+            St. John	1622<br>
+            St. Thomas	1635<br>
+            Appomattox	56<br>
+            Kewaunee	920<br>
+            Waushara	1836<br>
+            Bethel Census Area	157<br>
+            Gilchrist	661<br>
+            Power	1396<br>
+            Coles	391<br>
+            Buena Vista	229<br>
+            Barber	106<br>
+            Rooks	1484<br>
+            Roseau	1487<br>
+            Swift	1682<br>
+            Oregon	1287<br>
+            Bowman	193<br>
+            Dewey	502<br>
+            Elk	563<br>
+            Callahan	258<br>
+            Crosby	445<br>
+            Dallam	463<br>
+            Hansford	747<br>
+            Grand Isle	692<br>
+            Dinwiddie	511<br>
+            Lunenburg	1045<br>
+            Rappahannock	1434<br>
+            Brooke	216<br>
+            Ballard	97<br>
+            Schoolcraft	1553<br>
+            Pine	1363<br>
+            Stutsman	1662<br>
+            Oglala Lakota	1266<br>
+            Bee	137<br>
+            Dickens	503<br>
+            Frio	630<br>
+            Braxton	203<br>
+            Gilpin	666<br>
+            Prowers	1413<br>
+            Stillwater	1654<br>
+            Burt	243<br>
+            White Pine	1858<br>
+            Corson	421<br>
+            Jerauld	872<br>
+            Bandera	101<br>
+            Jack	861<br>
+            McCulloch	1102<br>
+            Scurry	1561<br>
+            Sawyer	1548<br>
+            Trimble	1743<br>
+            Nobles	1238<br>
+            Big Horn	161<br>
+            Luna	1044<br>
+            Sargent	1544<br>
+            Okfuskee	1273<br>
+            Miner	1150<br>
+            Concho	407<br>
+            Cooke	415<br>
+            Rains	1425<br>
+            Winkler	1881<br>
+            Colonial Heights city	397<br>
+            Fairfax city	587<br>
+            Pacific	1310<br>
+            Niobrara	1236<br>
+            Prince of Wales-Hyder Census Area	1411<br>
+            McDonough	1105<br>
+            Fleming	608<br>
+            Knott	943<br>
+            Tensas	1702<br>
+            Alpena	35<br>
+            Becker	134<br>
+            Andrew	44<br>
+            Golden Valley	676<br>
+            Box Butte	194<br>
+            Quay	1418<br>
+            Rolette	1483<br>
+            Hocking	799<br>
+            Sanborn	1529<br>
+            Dimmit	510<br>
+            Summers	1668<br>
+            Price	1406<br>
+            Geneva	655<br>
+            Evans	584<br>
+            Kearny	905<br>
+            Owsley	1305<br>
+            Trigg	1742<br>
+            Red Lake	1440<br>
+            Sully	1667<br>
+            Mingo	1152<br>
+            Montmorency	1175<br>
+            Churchill	350<br>
+            Alfalfa	26<br>
+            Hyde	833<br>
+            Motley	1189<br>
+            Falls Church city	593<br>
+            Green Lake	704<br>
+            Casey	290<br>
+            Garrard	644<br>
+            Tyrrell	1762<br>
+            Wilbarger	1866<br>
+            Washburn	1827<br>
+            Nome Census Area	1241<br>
+            Alcona	20<br>
+            Norman	1244<br>
+            Holt	804<br>
+            Pondera	1383<br>
+            Morrill	1184<br>
+            Bosque	185<br>
+            Freestone	627<br>
+            Kodiak Island Borough	945<br>
+            Baraga	105<br>
+            Mille Lacs	1146<br>
+            Nance	1204<br>
+            Moody	1178<br>
+            La Salle	954<br>
+            Chase	321<br>
+            Aitkin	13<br>
+            Red Willow	1442<br>
+            Haskell	768<br>
+            Woods	1894<br>
+            Rhea	1451<br>
+            Zavala	1927<br>
+            Benzie	149<br>
+            Kittson	939<br>
+            Furnas	633<br>
+            Harper	760<br>
+            Crockett	443<br>
+            Carson	284<br>
+            Yoakum	1919<br>
+            Sanpete	1535<br>
+            Piscataquis	1366<br>
+            Morrison	1186<br>
+            Audrain	83<br>
+            Childress	341<br>
+            Parmer	1320<br>
+            Dixon	515<br>
+            Hartley	766<br>
+            Lander	974<br>
+            Cimarron	354<br>
+            Norton city	1250<br>
+            Patrick	1325<br>
+            Edwards	558<br>
+            Carlisle	279<br>
+            Greeley	702<br>
+            Harding	753<br>
+            Cochran	381<br>
+            Jim Hogg	877<br>
+            Wheatland	1855<br>
+            Stanley	1638<br>
+            Nolan	1240<br>
+            Ochiltree	1262<br>
+            Lemhi	1004<br>
+            Pembina	1333<br>
+            Sitka City and Borough	1592<br>
+            Ransom	1432<br>
+            Hand	745<br>
+            Pocahontas	1378<br>
+            Pushmataha	1416<br>
+            Cottle	426<br>
+            Mariposa	1079<br>
+            Metcalfe	1138<br>
+            Wadena	1803<br>
+            Vinton	1797<br>
+            Harney	759<br>
+            Lipscomb	1020<br>
+            Runnels	1492<br>
+            Martinsville city	1084<br>
+            Frontier	631<br>
+            Sierra	1587<br>
+            Swain	1679<br>
+            Day	479<br>
+            Hitchcock	798<br>
+            Garza	647<br>
+            Glasscock	671<br>
+            Sac	1500<br>
+            Norton	1249<br>
+            Kanabec	894<br>
+            Brewster	210<br>
+            Keith	906<br>
+            Briscoe	211<br>
+            Coleman	390<br>
+            Taliaferro	1686<br>
+            Yancey	1910<br>
+            Ritchie	1465<br>
+            Ellsworth	568<br>
+            Refugio	1445<br>
+            Adjuntas	7<br>
+            Aguada	8<br>
+            Aguadilla	9<br>
+            Aguas Buenas	10<br>
+            Aibonito	11<br>
+            Anasco	41<br>
+            Arecibo	61<br>
+            Arroyo	67<br>
+            Barceloneta	108<br>
+            Barranquitas	112<br>
+            Bayamon	125<br>
+            Cabo Rojo	249<br>
+            Caguas	252<br>
+            Camuy	269<br>
+            Canovanas	273<br>
+            Carolina	281<br>
+            Catano	296<br>
+            Cayey	302<br>
+            Ceiba	306<br>
+            Ciales	351<br>
+            Cidra	353<br>
+            Coamo	378<br>
+            Comerio	406<br>
+            Corozal	420<br>
+            Dorado	523<br>
+            Fajardo	589<br>
+            Florida	610<br>
+            Guanica	720<br>
+            Guayama	721<br>
+            Guayanilla	722<br>
+            Guaynabo	723<br>
+            Gurabo	728<br>
+            Hatillo	769<br>
+            Hormigueros	811<br>
+            Humacao	824<br>
+            Isabela	852<br>
+            Jayuya	866<br>
+            Juana Diaz	886<br>
+            Juncos	888<br>
+            Lajas	965<br>
+            Lares	980<br>
+            Las Marias	984<br>
+            Las Piedras	985<br>
+            Loiza	1027<br>
+            Luquillo	1046<br>
+            Manati	1068<br>
+            Maunabo	1091<br>
+            Mayaguez	1094<br>
+            Moca	1160<br>
+            Morovis	1183<br>
+            Naguabo	1203<br>
+            Naranjito	1207<br>
+            Orocovis	1289<br>
+            Patillas	1324<br>
+            Penuelas	1340<br>
+            Ponce	1382<br>
+            Quebradillas	1419<br>
+            Rincon	1459<br>
+            Sabana Grande	1498<br>
+            Salinas	1508<br>
+            San German	1518<br>
+            San Lorenzo	1522<br>
+            San Sebastian	1528<br>
+            Santa Isabel	1540<br>
+            Toa Alta	1722<br>
+            Toa Baja	1723<br>
+            Trujillo Alto	1748<br>
+            Utuado	1774<br>
+            Vega Alta	1785<br>
+            Vega Baja	1786<br>
+            Villalba	1796<br>
+            Yabucoa	1905<br>
+            Yauco	1913<br>
+            Bailey	94<br>
+            Coke	387<br>
+            Collingsworth	396<br>
+            Ziebach	1928<br>
+            Valdez-Cordova Census Area	1777<br>
+            Conejos	410<br>
+            Glascock	670<br>
+            Harlan	756<br>
+            Benson	146<br>
+            Traill	1734<br>
+            Vieques	1793<br>
+            Shackelford	1571<br>
+            Piute	1371<br>
+            Palo Alto	1313<br>
+            Kimble	925<br>
+            Reeves	1444<br>
+            Laclede	962<br>
+            Dawes	477<br>
+            Covington city	430<br>
+            Bent	147<br>
+            Pickett	1358<br>
+            Ida	836<br>
+            Richardson	1454<br>
+            Washita	1829<br>
+            Tripp	1745<br>
+            Burnett	242<br>
+            Pepin	1342<br>
+            Dent	495<br>
+            Archer	59<br>
+            Fisher	605<br>
+            Little River	1022<br>
+            Magoffin	1059<br>
+            Nuckolls	1254<br>
+            Maricao	1073<br>
+            Ness	1218<br>
+            Storey	1659<br>
+            Ringgold	1460<br>
+            Wolfe	1889<br>
+            Avery	90<br>
+            Bottineau	188<br>
+            Coal	377<br>
+            San Saba	1527<br>
+            Northwest Arctic Borough	1248<br>
+            Elliott	566<br>
+            Langlade	976<br>
+            Hodgeman	801<br>
+            Trego	1739<br>
+            Griggs	716<br>
+            Lassen	986<br>
+            Hubbard	819<br>
+            Benewah	143<br>
+            Presidio	1403<br>
+            Hudspeth	821<br>
+            Shannon	1572<br>
+            Reagan	1438<br>
+            Weston	1850<br>
+            North Slope Borough	1245<br>
+            Pershing	1346<br>
+            Edgar	553<br>
+            Thayer	1708<br>
+            Culebra	450<br>
+            Edmunds	557<br>
+            Kingsbury	933<br>
+            Bristol Bay Borough	213<br>
+            Kinney	934<br>
+            Dillingham Census Area	508<br>
+            Gregory	714<br>
+            Garden	641<br>
+            Estill	580<br>
+            Rosebud	1488<br>
+            Dickey	505<br>
+            Irion	848<br>
+            Brule	223<br>
+            Hanson	748<br>
+            Aleutians West Census Area	23<br>
+            Lake and Peninsula Borough	967<br>
+            Baylor	127<br>
+            Real	1439<br>
+            LaMoure	956<br>
+            Wrangell City and Borough	1899<br>
+            Aleutians East Borough	22<br>
+            Haines Borough	733<br>
+            Banner	103<br>
+            Kidder	923<br>
+            Somervell	1604<br>
+            Alger	27<br>
+            Keweenaw	921<br>
+            Rich	1453<br>
+            Mellette	1127<br>
+            Schleicher	1550<br>
+            Bennett	144<br>
+            Dickenson	504<br>
+            Fergus	601<br>
+            Sutton	1677<br>
+            Upton	1772<br>
+            Bland	171<br>
+            Ozark	1308<br>
+            Billings	163<br>
+            Cavalier	301<br>
+            Culberson	449<br>
+            Treasure	1738<br>
+            Denali Borough	494<br>
+            Boise	176<br>
+            Issaquena	857<br>
+            Joplin	883<br>
+            Granite	694<br>
+            Boundary	190<br>
+            Eureka	582<br>
+            Hettinger	787<br>
+            Bear Lake	129<br>
+            Hooker	808<br>
+            Harmon	757<br>
+            Kusilvak Census Area	950<br>
+            Shoshone	1585<br>
+            Kenedy	910<br>
+            Throckmorton	1710<br>
+            Ontonagon	1284<br>
+            Gilliam	664<br>
+            Kingman	931<br>
+            Haakon	731<br>
+            Towner	1732<br>
+            Hickory	789<br>
+            Mora	1180<br>
+            Roger Mills	1481<br>
+            Foard	613<br>
+            Perkins	1343<br>
+            Fallon	591<br>
+            Sanders	1530<br>
+            Wibaux	1863<br>
+            Saipan	1505<br>
+            Tinian	1715<br>
+            McMullen	1117<br>
+            Sweet Grass	1680<br>
+            Dolores	518<br>
+            Dundy	534<br>
+            Stonewall	1658<br>
+            McCone	1097<br>
+            Chouteau	347<br>
+            Judith Basin	887<br>
+            Powder River	1394<br>
+            Lake of the Woods	968<br>
+            Daniels	466<br>
+            Doddridge	516<br>
+            Modoc	1161<br>
+            Arthur	68<br>
+            Sterling	1650<br>
+            Keya Paha	922<br>
+            Rawlins	1436<br>
+            Wallace	1811<br>
+            Loup	1036<br>
+            De Baca	480<br>
+            Daggett	460<br>
+            Borden	184<br>
+            Hayes	772<br>
+            Petroleum	1350<br>
+            Skagway Municipality	1594<br>
+            Esmeralda	578<br>
+            Loving	1038<br>
+            </a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+     
+
+    <img src="https://www.news-medical.net/images/news/ImageForNews_718788_16571762918567049.jpg" class="img-fluid" alt="..." style="width:100% ;">
+  
+    
+    <div class="login">
+
+      
+      <form action="{{ url_for('predict')}}"method="post">
+        <center>
+        <input class="names1" type="text" name="County" placeholder="County" > <br>
+      <input class="names2" type="text" name="Fips" placeholder="Fips" > <br>
+      <input class="names3" type="text" name="Cases" placeholder="Cases"> <br>
+      <hr>
+      <button type="submit" class="btn btn-dark btn-lg predict-button"><i class="fa-solid fa-virus-covid" style="color: red;"></i> PREDICT</button> </center>
+    </form>
+
+
+  <center>
+   <br>
+   <div class="prediction-text">
+  {{prediction_text}}</center>
+</div>
+
+
+    
+  </div>  
+  <div class="p-3 mb-2 bg-warning text-white">
+  <div class="bottom-container">
+    <center>
+    <a class="footer-link" href="https://www.linkedin.com/in/manmeet-singh-085a35229/">LinkedIn</a> <br>
+    <a class="footer-link" href="https://github.com/MANMEET75">GitHub</a> <br>
+    <a class="footer-link" href="https://public.tableau.com/app/profile/manmeet.singh8879">Tableau Public</a></center> <br>
+    <p class="copyright">© Manmeet Singh.</p>
+  </div></div>
+  
+
+
+  </body>
+</html>
+
+
